@@ -2,6 +2,7 @@ import Header from "./Header/Header";
 import LogoutBtn from "./Header/LogoutBtn";
 import Container from "../components/utils/Container";
 import Logo from "../components/utils/Logo"
+import Input from "../components/utils/Input";
 import Button from "../components/utils/Button";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
@@ -12,6 +13,7 @@ export {
     LogoutBtn,
     Container,
     Logo,
+    Input,
     Button,
     Login,
     Signup,
