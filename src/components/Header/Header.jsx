@@ -25,7 +25,7 @@ const Header = () => {
     ]
 
     return (
-        <header className="py-3 bg-#d2e2f2 border-b-2 border-500">
+        <header className="mb-8 py-3 bg-#d2e2f2 border-b-2 border-500">
             <Container>
                 <nav className="flex">
                     <div className="mr-4">
@@ -39,8 +39,8 @@ const Header = () => {
                                 <li key={item.name}>
                                     <Button
                                         onClick={() => navigate(item.path)}
-                                        className="inline-block mr-4 px-6 py-2 duration-200 rounded-full"
-                                    ></Button>
+                                        className="inline-block mr-4 px-6 py-2 duration-200 rounded-full text-white border-2"
+                                    >{item.name}</Button>
                                 </li>
                             ) : null
                         ))}

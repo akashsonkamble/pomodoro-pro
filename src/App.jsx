@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { login, logout } from "./store/authSlice";
 
 import { Outlet } from "react-router";
+
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
       .getCurrentUser()
       .then((user) => {
         if (user) {
-          dispatch(login(user));
+          dispatch(login({ user }));
         } else {
           dispatch(logout());
         }

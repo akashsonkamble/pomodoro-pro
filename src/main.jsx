@@ -7,6 +7,8 @@ import store from "./store/store.js";
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { AuthLayout } from "./components/index";
+
 import HomePage from "./pages/Home.jsx";
 import LoginPage from "./pages/Login.jsx";
 import SignupPage from "./pages/Signup.jsx";
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <p>Error</p>,
     children: [
       {
         path: "/",

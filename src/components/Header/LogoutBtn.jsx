@@ -20,7 +20,7 @@ const LogoutBtn = () => {
     }
     return (
         <Button
-            className="inline-block mr-4 px-6 py-2 duration-200 rounded-full"
+        className="inline-block mr-4 px-6 py-2 duration-200 rounded-full text-white border-2"
             onClick={logoutHandler}
         >Logout
         </Button>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Container, Button} from "./index";
 
+import { toast } from "react-toastify";
+
 const Pomodoro = () => {
-    const [timer, setTimer] = useState(25 * 60);
+    const [timer, setTimer] = useState(0.1 * 60);
     const [breakTimer, setBreakTimer] = useState(5 * 60);
     const [isRunning, setIsRunning] = useState(false);
 
@@ -20,6 +22,7 @@ const Pomodoro = () => {
 
     useEffect(() => {
         if (timer === 0) {
+            toast.success("It's time to take a break");
             setIsRunning(false);
             setBreakTimer(5 * 60);
         }
@@ -38,6 +41,9 @@ const Pomodoro = () => {
     };
 
     const startHandler = () => {
+        if (timer === 0) {
+            setTimer(25 * 60);
+        }
         setIsRunning(true);
     };
 
@@ -51,42 +57,49 @@ const Pomodoro = () => {
         setBreakTimer(0);
     };
     return (
-        <Container>
-            <div className=" text-center flex flex-col items-center align-center justify-center py-10">
-                <div className="text-9xl text-rebeccapurple">{formatTime(timer)}</div>
-                <div className="flex gap-10 mt-10">
-                <Button
-                    className="text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
-                    onClick={startHandler}
-                >
-                    Start
-                </Button>
-                <Button
-                    className="text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
-                    onClick={pauseHandler}
-                >
-                    Pause
-                </Button>
-                <Button
-                    className="text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
-                    onClick={resetHandler}
-                >
-                    Reset
-                </Button>
+        <div className="flex items-center justify-center w-full">
+            <Container>
+                <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10
+                border border-black/10`}>
+                    <h2 className="text-center text-9xl text-[#663399]">
+                        {formatTime(timer)}
+                    </h2>
+                    <div className="mt-8 text-center">
+                        <div className="space-y-5 justify-center align-center">
+                        <Button
+                            className="w-1/4 mr-4 px-6 py-2 duration-200 rounded-full text-white border-2"
+                            onClick={startHandler}
+                            >
+                            Start
+                        </Button>
+                        <Button
+                            className="w-1/4 mr-4 px-6 py-2 duration-200 rounded-full text-white border-2"
+                            onClick={pauseHandler}
+                            >
+                            Pause
+                        </Button>
+                        <Button
+                            className="w-1/4 mr-4 px-6 py-2 duration-200 rounded-full text-white border-2"
+                            onClick={resetHandler}
+                            >
+                            Reset
+                        </Button>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            {timer === 0 && (
-                <div className="flex flex-col items-center mt-8">
-                <h1 className="text-2xl font-bold mb-4 text-rebeccapurple">
-                    Break Timer
-                </h1>
-                <div className="text-4xl mb-4 text-rebeccapurple">
-                    {formatTime(breakTimer)}
-                </div>
-                </div>
-            )}
-        </Container>
+                {timer === 0 && (
+                    <div className="flex flex-col items-center mt-8">
+                        <h1 className="text-2xl font-bold mb-4 text-[#663399]">
+                            Break Timer
+                        </h1>
+                        <div className="text-4xl mb-4 text-[#663399]">
+                            {formatTime(breakTimer)}
+                        </div>
+                    </div>
+                )}
+            </Container>
+        </div>
     )
 }
 

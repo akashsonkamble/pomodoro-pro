@@ -3,9 +3,10 @@ import { Container, Pomodoro } from "../components/index";
 import { useSelector } from "react-redux";
 
 const HomePage = () => {
-    const status = useSelector(state => state.auth.status);
+    const authStatus = useSelector(state => state.auth.status);
+    console.log("HomePage :: authStatus :: ", authStatus);
 
-    if (!status) {
+    if (authStatus === false) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
@@ -21,7 +22,15 @@ const HomePage = () => {
         )
     }
     return (
-        <Pomodoro />
+        <div className="w-full py-8">
+            <Container>
+                <div className="flex flex-wrap">
+                    <div className="p-2 w-full">
+                        <Pomodoro />
+                    </div>
+                </div>
+            </Container>
+        </div>
     )
 }
 
