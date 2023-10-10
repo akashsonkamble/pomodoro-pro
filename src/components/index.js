@@ -4,6 +4,7 @@ import Container from "../components/utils/Container";
 import Logo from "../components/utils/Logo"
 import Input from "../components/utils/Input";
 import Button from "../components/utils/Button";
+import AuthLayout from "../components/AuthLayout";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
 import Pomodoro from "../components/Pomodoro";
@@ -15,6 +16,7 @@ export {
     Logo,
     Input,
     Button,
+    AuthLayout,
     Login,
     Signup,
     Pomodoro
