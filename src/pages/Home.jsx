@@ -1,5 +1,5 @@
-import { Container } from "../components/Container";
-import { Pomodoro } from "../components/Pomodoro";
+import { Container, Pomodoro } from "../components/index";
+
 import { useSelector } from "react-redux";
 
 const HomePage = () => {
