@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 const HomePage = () => {
     const authStatus = useSelector(state => state.auth.status);
-    console.log("HomePage :: authStatus :: ", authStatus);
 
     if (authStatus === false) {
         return (

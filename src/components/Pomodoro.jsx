@@ -4,7 +4,7 @@ import { Container, Button} from "./index";
 import { toast } from "react-toastify";
 
 const Pomodoro = () => {
-    const [timer, setTimer] = useState(0.1 * 60);
+    const [timer, setTimer] = useState(25 * 60);
     const [breakTimer, setBreakTimer] = useState(5 * 60);
     const [isRunning, setIsRunning] = useState(false);
 

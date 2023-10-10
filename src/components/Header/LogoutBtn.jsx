@@ -1,7 +1,10 @@
 import Button from "../utils/Button";
+
 import authService from "../../appwrite/auth"
+
 import { logout } from "../../store/authSlice"
 import { useDispatch } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 
 const LogoutBtn = () => {
