@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Header } from "./components/index";
+import { Header } from "./components/index";
 
 import authService from "./appwrite/auth";
 

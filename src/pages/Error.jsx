@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
 import { Container, Logo, Button } from "../components/index";
+
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
