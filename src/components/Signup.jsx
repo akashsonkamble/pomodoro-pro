@@ -86,7 +86,7 @@ const Signup = () => {
                             required: true,
                         })}
                         />
-                        <Button type="submit" className="w-full">
+                        <Button type="submit" className="w-full text-white">
                         Create Account
                         </Button>
                     </div>
