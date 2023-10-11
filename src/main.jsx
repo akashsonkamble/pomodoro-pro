@@ -12,6 +12,7 @@ import { AuthLayout } from "./components/index";
 import HomePage from "./pages/Home.jsx";
 import LoginPage from "./pages/Login.jsx";
 import SignupPage from "./pages/Signup.jsx";
+import ErrorPage from './pages/Error.jsx';
 
 import "react-toastify/dist/ReactToastify.css";
 import './index.css'
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <p>Error</p>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
