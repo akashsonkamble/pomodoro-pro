@@ -11,7 +11,7 @@ const HomePage = () => {
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold hover:text-gray-500">
+                            <h1 className="text-5xl font-bold mt-8 text-white drop-shadow-[0_1.2px_1.2px_rgba(102,51,153,1)]">
                                 Login to Start
                             </h1>
                         </div>
