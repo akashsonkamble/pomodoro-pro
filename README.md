@@ -2,7 +2,7 @@
 
 ![Signup Page](./public/screenshot/signup.png)
 ![Signin Page](./public/screenshot/signin.png)
-![Home Page](./public/screenshot/Home.png)
+![Home Page](./public/screenshot/home.png)
 ![Error Page](./public/screenshot/error.png)
 
 ## Description
