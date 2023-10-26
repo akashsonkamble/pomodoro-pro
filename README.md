@@ -1,5 +1,10 @@
 # PomoPerfect
 
+**Test User:**
+- Username: user1
+- Email: user1@example.com
+- Password: password123
+
 ![Signup Page](./public/screenshot/signup.png)
 ![Signin Page](./public/screenshot/signin.png)
 ![Home Page](./public/screenshot/home.png)
